@@ -1,0 +1,325 @@
+V 13
+2
+LANG:10004 0 
+LANG:10001 0 
+PANEL,-1 -1 583 423 N "_3DFace" 0
+E E E E E 1 -1 -1 0  53 102
+""0  1
+E E 3
+"CBRef" "1"
+"EClose" E
+"dpi" "96"
+0 0 0
+""
+DISPLAY_LAYER, 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+LAYER, 0 
+1
+LANG:10004 0 
+13 1
+"route-eno1"
+""
+1 158.3288790684624 242.530931122449 E E E 1 E 1 E N "_ButtonText" E N "_Button" E E
+ E E
+0 0 0 0 0 0
+E E E
+0
+2
+LANG:10004 0 
+LANG:10001 0 
+
+0
+2
+LANG:10004 27 SimSun,-1,12,5,50,0,0,0,0,0
+LANG:10001 27 SimSun,-1,12,5,50,0,0,0,0,0
+0  157 223 294 274
+
+T 
+2
+LANG:10004 10 route-eno1
+LANG:10001 16 生成route-eno1
+"main()
+{
+  
+  dyn_string value;
+  int indexOfValue;
+  int indexOfString;
+  
+  string filename;
+  getValue(\"route_Name\", \"text\", filename);
+  string route_Path = getPath( SCRIPTS_REL_PATH, filename );
+  string route_Info;
+  bool res = fileToString( route_Path, route_Info );
+
+  DebugN(\"route_Info原始数据\",route_Info);
+  
+  if( !res )
+  {
+    DebugTN(\"*********文件转换字符串失败************\");
+    
+    return;
+  }
+  
+  dyn_string split;
+  split = strsplit( route_Info, \"\\n\" );
+  
+//   DebugN(\"split按行进行分割后数据\",split);  
+  
+  dyn_string split2;
+  
+  if( dynlen(split) < 1 )
+  {
+    DebugTN(\"*********路由文件内容为空*************\");
+    
+    return;
+  }
+  
+  for( int i=1; i <= dynlen(split); i++ )
+  {
+    if( split[i] != \"\" )
+    {
+      split2 = strsplit(split[i],\" \");
+//       DebugN(\"strsplit[i]单行元素进行分割\",split2);
+    
+      if( split2[1] != \"#route\" && dynlen(split2) >= 6 && split2[1] != \"#\" )
+      {
+        string judge = substr(split2[6], 0,3);
+        string judge_Value;
+        if(  judge == \"139\" )
+        {
+          judge_Value = \"1\";
+        }
+        else
+        {
+          judge_Value = \"2\";
+        }
+    
+        dyn_string ip = strsplit(split2[4],\"/\");
+    
+        string address = \"ADDRESS\"+indexOfString+\"=\"+ip[1];
+        string mask = \"NETMASK\"+indexOfString+\"=\"+\"255.255.255.0\";
+        string gateway = \"GATEWAY\"+indexOfString+\"=\"+split2[6]; 
+        string metric = \"METRIC\"+indexOfString+\"=\"+judge_Value;
+        indexOfString++;
+
+        if(  i >= 14 )
+        {
+          value[indexOfValue+1] = address;
+          value[indexOfValue+2] = mask;
+          value[indexOfValue+3] = gateway;
+          value[indexOfValue+4] = metric;
+          indexOfValue = indexOfValue+4;
+        }
+      }
+    }
+  }
+  file f;
+  string file_Url = \"D:/route-eno1\";//+filename;
+  f=fopen(file_Url,\"w+\");
+  for( int i=1; i <= dynlen(value); i++)
+  {
+    fprintf(f,\"%s\\n\",value[i]);       
+  }
+  rewind(f);
+  fclose(f);
+}
+" 0
+ E E E
+14 2
+"route_Name"
+""
+1 187 147.4 E E E 1 E 1 E N "WF_Text" E N "_Window" E E
+ E E
+1 0 0 0 0 0
+E E E
+0
+2
+LANG:10004 41 请输入文件名称(带有格式属性)
+LANG:10001 41 请输入文件名称(带有格式属性)
+
+0
+2
+LANG:10004 32 Segoe Print,-1,19,5,75,0,0,0,0,0
+LANG:10001 32 Segoe Print,-1,19,5,75,0,0,0,0,0
+0  185 131 399 173
+3 "0s" 0 0 0 0 0 -1  E E E
+13 3
+"route-eno2"
+""
+1 291.3288790684624 242.530931122449 E E E 1 E 1 E N "_ButtonText" E N "_Button" E E
+ E E
+2 0 0 0 0 0
+E E E
+0
+2
+LANG:10004 0 
+LANG:10001 0 
+
+0
+2
+LANG:10004 27 SimSun,-1,12,5,50,0,0,0,0,0
+LANG:10001 27 SimSun,-1,12,5,50,0,0,0,0,0
+0  290 223 427 274
+
+T 
+2
+LANG:10004 10 route-eno2
+LANG:10001 16 生成route-eno2
+"main()
+{
+  
+  dyn_string value;
+  int indexOfValue;
+  int indexOfString;
+  
+  string filename;
+  getValue(\"route_Name\", \"text\", filename);
+  string route_Path = getPath( SCRIPTS_REL_PATH, filename );
+  string route_Info;
+  bool res = fileToString( route_Path, route_Info );
+
+  DebugN(\"route_Info原始数据\",route_Info);
+  
+  if( !res )
+  {
+    DebugTN(\"*********文件转换字符串失败************\");
+    
+    return;
+  }
+  
+  dyn_string split;
+  split = strsplit( route_Info, \"\\n\" );
+  
+//   DebugN(\"split按行进行分割后数据\",split);  
+  
+  dyn_string split2;
+  
+  if( dynlen(split) < 1 )
+  {
+    DebugTN(\"*********路由文件内容为空*************\");
+    
+    return;
+  }
+  
+  for( int i=1; i <= dynlen(split); i++ )
+  {
+    if( split[i] != \"\" )
+    {
+      split2 = strsplit(split[i],\" \");
+//       DebugN(\"strsplit[i]单行元素进行分割\",split2);
+    
+      if( split2[1] != \"#route\" && dynlen(split2) >= 6 && split2[1] != \"#\" )
+      {
+        string judge = substr(split2[6], 0,3);
+        string judge_Value;
+        if(  judge == \"169\" )
+        {
+          judge_Value = \"1\";
+        }
+        else
+        {
+          judge_Value = \"2\";
+        }
+    
+        dyn_string ip = strsplit(split2[4],\"/\");
+    
+        string address = \"ADDRESS\"+indexOfString+\"=\"+ip[1];
+        string mask = \"NETMASK\"+indexOfString+\"=\"+\"255.255.255.0\";
+        string gateway = \"GATEWAY\"+indexOfString+\"=\"+split2[6]; 
+        string metric = \"METRIC\"+indexOfString+\"=\"+judge_Value;
+        indexOfString++;
+
+        if(  i >= 14 )
+        {
+          value[indexOfValue+1] = address;
+          value[indexOfValue+2] = mask;
+          value[indexOfValue+3] = gateway;
+          value[indexOfValue+4] = metric;
+          indexOfValue = indexOfValue+4;
+        }
+      }
+    }
+  }
+  file f;
+  string file_Url = \"D:/route-eno2\";//+filename;
+  f=fopen(file_Url,\"w+\");
+  for( int i=1; i <= dynlen(value); i++)
+  {
+    fprintf(f,\"%s\\n\",value[i]);       
+  }
+  rewind(f);
+  fclose(f);
+}
+" 0
+ E E E
+2 4
+"PRIMITIVE_TEXT1"
+""
+1 166 290 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+3 0 0 0 0 0
+E E E
+0
+1
+LANG:10004 0 
+
+3
+"sizePolicy" "Fixed Fixed"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 3 2 1 E 1.127450980392157 0 1.466666666666667 -16.90196078431372 -139.4 0 E 166 290 264 301
+0 2 2 "0s" 0 0 0 192 0 0  166 290 1
+1
+LANG:10004 26 SimSun,9,-1,5,50,0,0,0,0,0
+0 1
+LANG:10004 22 139网段的权重为1
+2 5
+"PRIMITIVE_TEXT2"
+""
+1 166 290 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+4 0 0 0 0 0
+E E E
+0
+1
+LANG:10004 0 
+
+3
+"sizePolicy" "Fixed Fixed"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 3 2 1 E 1.127450980392157 0 1.466666666666667 116.0980392156863 -139.4 0 E 166 290 264 301
+0 2 2 "0s" 0 0 0 192 0 0  166 290 1
+1
+LANG:10004 26 SimSun,9,-1,5,50,0,0,0,0,0
+0 1
+LANG:10004 22 169网段的权重为1
+0
+LAYER, 1 
+1
+LANG:10004 0 
+0
+LAYER, 2 
+1
+LANG:10004 0 
+0
+LAYER, 3 
+1
+LANG:10004 0 
+0
+LAYER, 4 
+1
+LANG:10004 0 
+0
+LAYER, 5 
+1
+LANG:10004 0 
+0
+LAYER, 6 
+1
+LANG:10004 0 
+0
+LAYER, 7 
+1
+LANG:10004 0 
+0
+0

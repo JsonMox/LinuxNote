@@ -1,0 +1,38 @@
+[general]
+pvss_path = "C:/Siemens/Automation/WinCC_OA/3.14"
+#server-proj_path = "//occsvr1/WinccOA_Proj/OCCSVR_RT"
+proj_path = "D:/siasun/OCCWKS1"
+proj_version = "3.14"
+langs = "zh_CN.utf8"
+data = "OCCSVR1-1,OCCSVR1-2$OCCSVR2-1,OCCSVR2-2"
+event = "OCCSVR1-1,OCCSVR1-2$OCCSVR2-1,OCCSVR2-2"
+distributed = 1
+
+useRDBArchive = 1
+useRDBGroups = 1
+
+[ui]
+//visionScreenMode = "noTitleBar"
+//childTitleBar = 0
+//childSystemMenu = 0
+useLocalIdentification = 1
+queryRDBdirect = 1
+CtrlDLL = "CtrlRDBArchive"
+CtrlDLL = "CtrlRDBCompr"
+CtrlDLL = "CtrlADO"
+
+[ctrl]
+queryRDBdirect = 1
+CtrlDLL = "CtrlRDBArchive"
+CtrlDLL = "CtrlRDBCompr"
+CtrlDLL = "CtrlADO"
+
+[data]
+useLocalIdentification = 1
+sendAlertsToRAIMA = 1
+
+[ctrl_20]
+connectToRedundantHosts = 1
+
+[ctrl_55]
+connectToRedundantHosts = 1

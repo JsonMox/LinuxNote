@@ -1,0 +1,29 @@
+oracle-scan =
+  (DESCRIPTION =
+    (ENABLE=BROKEN)
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = oracle-scan.rac.occ)(PORT = 1521))
+    )
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+        (SERVICE_NAME=occorcl)
+     # (SID = occorcl)
+    )
+  )
+
+
+
+occorcl=
+  (DESCRIPTION =
+    (ENABLE=BROKEN)
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = oracle-scan.rac.occ)(PORT = 1521))
+    )
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+        (SERVICE_NAME=occorcl)
+    #  (SID = occorcl)
+    )
+  )
+
+

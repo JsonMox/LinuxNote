@@ -1,0 +1,51 @@
+<?xml version="1.0" standalone="yes" ?>
+<!-- Copyright (c) 1999, 2014, Oracle and/or its affiliates.
+All rights reserved. -->
+<!-- Do not modify the contents of this file by hand. -->
+<COMPS_LIST>
+<COMP NAME="oracle.client" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.rdbms.install.common" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.ntoramts" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.ntoledb" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.aspnet_2" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.ntoledb.odp_net_2" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.rsf" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.has.common" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.nlsrtl.rsf" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.nlsrtl.rsf.lbuilder" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.perlint" VERSION="5.14.4.0.0"/>
+<COMP NAME="oracle.bali.jewt" VERSION="11.1.1.6.0"/>
+<COMP NAME="oracle.buildtools.rsf" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.rdbms.install.plugins" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.perlint.modules" VERSION="5.14.4.0.0"/>
+<COMP NAME="oracle.rdbms.crs" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.has.common.cvu" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.perlint.expat" VERSION="2.0.1.0.2"/>
+<COMP NAME="oracle.install.deinstalltool" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.network.rsf" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.nlsrtl.rsf.core" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.oracore.rsf" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.oracore.rsf.core" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.has.rsf" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.precomp.rsf" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.rdbms.rsf" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.slax.rsf" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.nlsrtl.rsf.ic" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.rdbms.rsf.ic" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.rdbms.rsf.runtime" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.ons.ic" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.xdk.rsf" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.ldap.rsf.ic" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.bali.share" VERSION="11.1.1.6.0"/>
+<COMP NAME="oracle.ldap.rsf" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.assistants.deconfig" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.has.deconfig" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.rdbms.deconfig" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.sysman.ccr.deconfig" VERSION="10.3.1.0.0"/>
+<COMP NAME="oracle.usm.deconfig" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.swd.oui" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.swd.opatch" VERSION="12.1.0.1.2"/>
+<COMP NAME="oracle.swd.oui.core" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.swd.oui.core.min" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.jdk" VERSION="1.6.0.75.0"/>
+</COMPS_LIST>

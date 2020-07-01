@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="yes" ?>
+<!-- Copyright (c) 1999, 2014, Oracle and/or its affiliates.
+All rights reserved. -->
+<!-- Do not modify the contents of this file by hand. -->
+<COMPS_LIST>
+<COMP NAME="oracle.client" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.rdbms.ic" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.dbjava.ic" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.nlsrtl.rsf.ic" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.rdbms.rsf.ic" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.odbc.ic" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.ons.ic" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.ldap.rsf.ic" VERSION="12.1.0.2.0"/>
+<COMP NAME="oracle.sqlplus.ic" VERSION="12.1.0.2.0"/>
+</COMPS_LIST>

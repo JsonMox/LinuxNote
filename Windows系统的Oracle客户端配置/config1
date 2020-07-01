@@ -1,0 +1,31 @@
+[general]
+pvss_path = "C:/Siemens/Automation/WinCC_OA/3.14"
+proj_path = "D:/siasun/LRJWKS1"
+proj_version = "3.14"
+langs = "zh_CN.utf8"
+
+data = "LRJSVR1-1,LRJSVR1-2$LRJSVR2-1,LRJSVR2-2"
+event = "LRJSVR1-1,LRJSVR1-2$LRJSVR2-1,LRJSVR2-2"
+useRDBArchive = 1
+useRDBGroups = 1
+
+[ui]
+
+visionScreenMode = "noTitleBar"
+
+childTitleBar = 0
+
+childSystemMenu = 0
+
+
+queryRDBdirect = 1
+CtrlDLL = "CtrlRDBArchive"
+CtrlDLL = "CtrlRDBCompr"
+CtrlDLL = "CtrlADO"
+
+
+[ctrl]
+queryRDBdirect = 1
+CtrlDLL = "CtrlRDBArchive"
+CtrlDLL = "CtrlRDBCompr"
+CtrlDLL = "CtrlADO"

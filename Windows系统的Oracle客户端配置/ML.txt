@@ -1,0 +1,13 @@
+172.139.10.13
+ping 172.139.10.13
+ping oracle-scan.rac.occ
+tnsping oracle-scan
+NLS_LANG
+SIMPLIFIED CHINESE_CHINA.AL32UTF8
+
+regedit
+HKEY_LOCAL_MACHINE\SOFTWARE\ORACLE\KEY_OraDb11g_home1
+.AL32UTF8
+
+oracle-scan
+PVSSRDB

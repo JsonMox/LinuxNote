@@ -1,0 +1,28 @@
+[general]
+pvss_path = "C:/Siemens/Automation/WinCC_OA/3.14"
+proj_path = "D:/siasun/BELWKS1"
+proj_version = "3.14"
+langs = "zh_CN.utf8"
+data = "BELSVR1-1,BELSVR1-2$BELSVR2-1,BELSVR2-2"
+event = "BELSVR1-1,BELSVR1-2$BELSVR2-1,BELSVR2-2"
+#distributed = 1
+useRDBArchive = 1
+useRDBGroups = 1
+
+#解决Modbus写多个寄存器不能超过10个的问题
+maxConnectMessageSize = 1000
+
+
+[ui]
+visionScreenMode = "noTitleBar"
+#childSystemMenu = 0
+queryRDBdirect = 1
+CtrlDLL = "CtrlRDBArchive"
+CtrlDLL = "CtrlRDBCompr"
+CtrlDLL = "CtrlADO"
+
+[ctrl]
+queryRDBdirect = 1
+CtrlDLL = "CtrlRDBArchive"
+CtrlDLL = "CtrlRDBCompr"
+CtrlDLL = "CtrlADO"

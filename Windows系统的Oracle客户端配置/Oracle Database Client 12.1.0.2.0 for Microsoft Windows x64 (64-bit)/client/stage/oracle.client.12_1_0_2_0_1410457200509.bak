@@ -1,0 +1,9 @@
+<?xml version="1.0" standalone="yes" ?>
+<!-- Copyright (c) 1999, 2014, Oracle and/or its affiliates.
+All rights reserved. -->
+<!-- Do not modify the contents of this file by hand. -->
+<agg:Descriptions version="1.0.0" xmlns:agg="http://www.oracle.com/sysman/emCfg/AggregateDescriptions" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.oracle.com/sysman/emCfg/AggregateDescriptions" platform="NT_AMD64">
+   <agg:ComplexAggregate id="oracle.client">
+      <agg:SimplestAggregateRef idref="OuiConfigVariables"/>
+   </agg:ComplexAggregate>
+</agg:Descriptions>
